@@ -1,0 +1,99 @@
+<div class="right" *ngIf="isLogin">
+    <img _ngcontent-serverapp-c139=""
+        src="https://d8it4huxumps7.cloudfront.net/uploads/images/login/create-icon.png?d=80x80" alt="Welcome Back"
+        width="40" height="40" loading="lazy">
+    <span class="hdng">Hi, Unstoppable <br><strong>Welcome Back to Unstop!</strong></span>
+    <button class="google-login">Continue with Google</button>
+    <p class="or_login"><span>Or login with email</span></p>
+    <form class="forms" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+        <input type="email" class="email" placeholder="Email Id" formControlName="email">
+        <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
+            class="error">
+            <div *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</div>
+            <div *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email format.</div>
+        </div>
+        <input type="password" class="email" placeholder="Enter Your Password" formControlName="password">
+        <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)"
+            class="error">
+            <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</div>
+            <div *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long.
+            </div>
+        </div>
+        <button type="submit" class="submit_btn">Login</button>
+    </form>
+    <p class="an_account">Don't have an account? <a href="javascript:void(0)" (click)="toggleForm()">Sign up</a></p>
+</div>
+
+<div class="right2" *ngIf="!isLogin">
+    <h2>Create an Account!</h2>
+
+    <div class="form-scroll-container">
+        <div class="form-container">
+            <div class="form-header">
+                <p>Create an account</p>
+                <div class="bdr_radio">
+                    <button type="button" class="bdr_radio">Candidate</button>
+                    <button type="button" class="bdr_radio">Company</button>
+                    <button type="button" class="bdr_radio">College</button>
+                </div>
+            </div>
+            <form class="forms" [formGroup]="signupForm" (ngSubmit)="onSubmitSignup()">
+                <div class="name-fields">
+                    <div class="input-field">
+                        <input type="text" class="email" placeholder="First Name" formControlName="firstName">
+                        <div *ngIf="signupForm.get('firstName')?.invalid && (signupForm.get('firstName')?.dirty || signupForm.get('firstName')?.touched)"
+                            class="error">
+                            <div *ngIf="signupForm.get('firstName')?.errors?.['required']">First Name is required.</div>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" class="email" placeholder="Last Name" formControlName="lastName">
+                        <div *ngIf="signupForm.get('lastName')?.invalid && (signupForm.get('lastName')?.dirty || signupForm.get('lastName')?.touched)"
+                            class="error">
+                            <div *ngIf="signupForm.get('lastName')?.errors?.['required']">Last Name is required.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <input type="text" class="email" placeholder="Username" formControlName="username">
+                    <div *ngIf="signupForm.get('username')?.invalid && (signupForm.get('username')?.dirty || signupForm.get('username')?.touched)"
+                        class="error">
+                        <div *ngIf="signupForm.get('username')?.errors?.['required']">Username is required.</div>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <input type="email" class="email" placeholder="Email Address" formControlName="email">
+                    <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)"
+                        class="error">
+                        <div *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</div>
+                        <div *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format.</div>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <input type="tel" class="email" placeholder="Phone Number" formControlName="phone">
+                </div>
+                <div class="input-field">
+                    <input type="password" class="email" placeholder="Password" formControlName="password">
+                    <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)"
+                        class="error">
+                        <div *ngIf="signupForm.get('password')?.errors?.['required']">Password is required.</div>
+                        <div *ngIf="signupForm.get('password')?.errors?.['minlength']">Password must be at least 6
+                            characters long.</div>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="email" placeholder="Confirm Password"
+                        formControlName="confirmPassword">
+                    <div *ngIf="signupForm.get('confirmPassword')?.invalid && (signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched)"
+                        class="error">
+                        <div *ngIf="signupForm.get('confirmPassword')?.errors?.['required']">Confirm Password is
+                            required.</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <button type="submit" class="submit_btn" (click)="onSubmitSignup()">Next</button>
+    <div class="form-footer">
+        <p>Already have an account? <a href="javascript:void(0)" (click)="toggleForm()">Login</a></p>
+    </div>
