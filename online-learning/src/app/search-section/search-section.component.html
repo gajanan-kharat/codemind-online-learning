@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="top-section">
+        <div class="search">
+            <div class="box"> 
+                <img class="codemind-img" src="../../assets/Image/codemind-Img.jpeg" >
+                <!-- <p>CODEMIND</p> -->
+            </div>
+            <div class="box">
+                <input class="input-box" type="text" placeholder="search "><i class="fa fa-search search-icon"></i>
+                <button id="dark" class="btn"><i id="dark-icon" class="fa fa-moon-o"></i>DARK</button>
+            </div>
+        </div>
+        <div class="buttons">
+            <!-- <button id="sign-in" class="btn">SIGN IN</button> -->
+            <button id="sign-up" class="btn" (mouseover)="toggleUserMenu(true)" (mouseleave)="toggleUserMenu(false)">A
+                <div class="user-menu" *ngIf="isUserMenuOpen">
+                    <a href="#" class="menu-link"  routerLink="/account">Account</a>
+                    <a href="#" class="menu-link">Sign Out</a>
+                </div>
+            </button>
+        </div>
+        
+         <!-- Menu icon for mobile view -->
+  <!--<button class="menu-icon" (click)="toggleSidebar()">☰</button>
+        <div class="sidebar" [class.active]="isSidebarOpen" >
+            <button class="dark" class="btn">DARK MODE</button>
+            <button class="sign-in" class="btn">SIGN IN</button>
+            <button class="sign-up" class="btn">SIGN UP</button>
+         </div>-->
+    </div>
+
+    <div class="Title-section">
+        <p>Welcome to CODEMIND</p>
+    </div>
+    
+</div>

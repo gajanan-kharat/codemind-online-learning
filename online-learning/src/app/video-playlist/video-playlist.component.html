@@ -1,0 +1,25 @@
+<div class="video-playlist-container">
+    <div class="main-video">
+        <div class="video-container" (mouseenter)="showControls()" (mouseleave)="hideControls()" (click)="showControlsTemporarily()">
+            <video #videoPlayer controls [src]="selectedVideo.src" width="100%" autoplay>
+                Your browser does not support the video tag.
+            </video>
+            <p>{{ selectedVideo.title }}</p>
+            <!-- prev,next button -->
+            <div class="controls-overlay" [class.show]="controlsVisible">
+                <button (click)="playPrevious()"><i class="fa fa-chevron-left"></i></button>
+                <button (click)="togglePlayPause()">
+                    <i [ngClass]="isPlaying ? 'fa fa-pause' : 'fa fa-play'"></i>
+                </button>
+                <button (click)="playNext()"><i class="fa fa-chevron-right"></i></button>
+            </div>
+        </div>      
+    </div>
+    <div class="related-videos">
+        <h3>Related Videos</h3>
+        <div *ngFor="let video of relatedVideos" (click)="loadVideo(video.id)">
+          <p><i class="fa fa-check-circle-o icon"></i> {{ video.title }}</p>
+        </div>
+    </div>
+</div>
+  

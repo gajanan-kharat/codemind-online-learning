@@ -1,0 +1,30 @@
+<div class="course-container">
+    <div class="courses">
+        <p class="course-name">Courses <span class="video-count">00</span></p>
+        <div class="gallery-container">
+            <div class="video-item" *ngFor="let video of videos" (click)="openPlaylist(video.id)">
+              <img [src]="video.thumbnail" [alt]="video.title">
+              <div class="course-detail">
+                <p class="course-title">{{ video.title }}</p>
+                <p>{{ video.lessons }}</p>
+                <!-- <p class="description">{{ video.description }}</p> -->
+              </div>
+              <div class="price-detail">
+                <p class="price"> &#8377;{{ video.price }} </p>
+                <p class="old_price"> &#8377;{{ video.old_price }}</p>
+               
+              </div>
+              <!-- <p class="discount"> {{video.discount}}OFF</p> -->
+            </div>
+          </div>
+          
+          <!--<div class="popup" *ngIf="selectedVideo" (click)="closePopup()">
+            <div class="popup-content" (click)="$event.stopPropagation()">
+              <span class="close-btn" (click)="closePopup()">&times;</span>
+              <video controls [src]="selectedVideo.src" width="100%">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>-->     
+    </div>
+</div>

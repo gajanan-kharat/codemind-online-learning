@@ -1,0 +1,49 @@
+<app-search-section></app-search-section>
+<div class="main-layout">
+<app-account-sidebar></app-account-sidebar>
+<div class="container">
+    <div class="account-container" >
+    <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+        <div class="user">
+             A 
+        </div>
+      <div>
+        <label for="accountName">Account Name</label>
+        <input id="accountName" formControlName="accountName" type="text">
+        <!-- <button type="button" (click)="editField('accountName')"> -->
+          <i class="fa fa-pencil edit"></i>
+        <!-- </button> -->
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" [disabled]="isEmailDisabled">
+        <i class="fa fa-check-circle-o check"></i>
+      </div>
+      <div>
+        <label for="contactNumber">Contact Number</label>
+        <input id="contactNumber" formControlName="contactNumber" type="text" placeholder="+91-0000000000">
+        <!-- <button type="button" (click)="editField('contactNumber')"> -->
+          <i class="fa fa-pencil edit"></i>
+        <!-- </button> -->
+      </div>
+      <div>
+        <label for="addresses">Addresses</label>
+        <input id="addresses" formControlName="addresses" type="text" placeholder="Billing address">
+        <!-- <div formArrayName="addresses" *ngFor="let address of addresses.controls; let i=index">
+          <input [formControlName]="i" type="text">
+          <button type="button" (click)="editField('addresses', i)">
+            <i class="fa fa-pencil"></i>
+          </button>
+        </div> -->
+        <!-- <button type="button" (click)="addAddress()">Add Address</button> -->
+        
+      </div>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+</div>
+
+
+
+  

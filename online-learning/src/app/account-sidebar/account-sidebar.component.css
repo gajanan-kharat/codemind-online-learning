@@ -1,0 +1,38 @@
+.sidebar-container {
+ /* font-size: 30px;
+ font-weight: bold; */
+ font-family: "Noto Sans", sans-serif;
+ border: 1px solid #ddd;
+ height: 83%;
+ width: 50vh;
+ margin-top: 35px;
+ border-radius: 8px;
+ background-color: #f9f9f9;
+ margin-left: 100px;
+ text-align: center;
+ /* padding-left: 40px; */
+
+}
+.sidebar-container p{
+    font-size: 1.5rem;
+    margin: 10px;
+    font-weight: bold;
+   
+}
+.account-detail button{
+    display: block;
+    width: 100%;
+    /* margin-bottom: 15px; */
+    border-style: none;
+    padding: 10px 0px;
+    background-color: #f9f9f9;
+    /* margin-left: 10px; */
+}
+.account-detail button i{
+    margin-right: 8px;
+}
+.account-detail button:hover{
+    background-color: #ddd;
+    width: 100%;
+
+}

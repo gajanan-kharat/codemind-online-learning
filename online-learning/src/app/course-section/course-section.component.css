@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+.course-container{
+    display: flex;
+    margin-top: 140px;
+}
+.courses{
+    font-size: 32px;
+    /* margin-left: 100px; */
+    font-weight: 30px;
+    font-family: "Noto Sans", sans-serif;
+    color: rgb(94, 92, 92);
+}
+.courses .course-name{
+      margin-left: 100px;
+}
+.video-count{
+    background-color: rgb(237, 243, 238);
+    font-size: 15px;
+    border-radius: 20px;
+    padding:5px 8px;
+    
+}
+
+
+/* styles.css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+} */
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    /* padding: 20px; */ 
+    /* width: 460%; */
+    /* border: 1px solid rgb(231, 228, 228);
+    width: 95%; */
+    /* border-radius: 10px; */
+    
+}
+
+.video-item {
+    background-color: #fff;
+    /* border: 1px solid #ddd; */
+    box-shadow: 2px 2px 5px #ddd;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 25%;
+    border-radius: 5px;
+    background-color: #f0f7fc;
+    /* margin: 10px; */
+    padding: 10px;
+    /* width: auto; */
+    text-align: center;
+    cursor: pointer;
+    /* transition: transform 0.2s; */
+    transition: transform 2s ease; 
+    /* display: flex;
+    justify-content: space-between; */
+}
+.course-detail p{
+    /* text-align: left;
+    margin-left:10px; */
+    font-size: 16px;
+    margin:5px;
+
+}
+.course-title{
+    font-weight: bold;
+    color:hsl(240, 72%, 27%); 
+}
+.price{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+.price-detail{
+    display: flex;
+    justify-content: space-between;
+}
+.old_price{
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-decoration: line-through;
+    color: #c2c1c1;
+}
+.discount{
+    font-size: 16px;
+    margin: 0px;
+    background-color: rgb(255, 217, 0);
+    padding: 2px;
+    border-radius: 5px;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+.video-item:hover {
+    transform: scale(1.05);
+    background-color: rgb(205, 236, 232);
+}
+
+.video-item img {
+    /* width: 100%;
+    height: auto; */ 
+    /* margin-top: 15px; */
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid rgb(223, 218, 218);
+}
+
+.popup {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 360px) {
+    .course-container{
+        margin-top: 100px !important;
+    }
+    .courses{
+        font-size: 30px;
+
+    }
+    .gallery-container {
+        width:100%;
+    }
+    .video-item img{
+        width:100%;
+    }
+}
+
+/* For mobile devices (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+    .course-container{
+        margin-top: 110px;
+    }
+    .courses{
+        margin-left: 10px;
+    }
+    .courses .course-name{
+       text-align: center;
+       margin-left:0px;
+    }
+    .description{
+        display: none;
+    }
+    .video-item {
+        width: 60%;
+        margin-left: 0px;
+    }
+    .video-item img{
+        height: 100px;
+        margin-top: 10px;
+    }
+    .discount{
+        margin-top: 10px;
+    }
+ }
+  /* For tablets like iPads (portrait and landscape) */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .gallery-container {
+        width:100%;
+    }
+    .video-item{
+        width: 40%;
+    }
+    .video-item img{
+        width:100%;
+    }
+    .courses{
+       
+        margin-right: 20px;
+    }
+  }  
+  /* For laptops and desktops */
+@media only screen and (min-width: 1025px) {
+   
+  }
